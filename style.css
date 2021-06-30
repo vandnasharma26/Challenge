@@ -1,0 +1,133 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(0, 0%, 95%);
+  margin: 0;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+/* Typography */
+h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: hsl(0, 0%, 95%);
+}
+
+p {
+  font-size: 0.9375rem;
+  line-height: 1.5em;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+/* Layout */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 65vh;
+  margin: 5em auto;
+}
+
+.sedans {
+  background: hsl(31, 77%, 52%);
+  border-radius: 10px 0 0 10px;
+  padding: 3em;
+}
+
+.suvs {
+  background: hsl(184, 100%, 22%);
+  padding: 3em;
+}
+
+.luxury {
+  background: hsl(179, 100%, 13%);
+  border-radius: 0 10px 10px 0;
+  padding: 3em;
+}
+
+/* Buttons */
+
+.btn {
+  font-size: 0.9375rem;
+  background: hsl(0, 0%, 95%);
+  display: inline-block;
+  padding: 0.8em 1.6em;
+  border-radius: 2em;
+  margin-top: 1em;
+  text-decoration: none;
+}
+
+.btn:nth-child(1) {
+  color: hsl(31, 77%, 52%);
+}
+
+.btn:nth-child(1) {
+  color: hsl(184, 100%, 22%);
+}
+
+.btn:nth-child(1) {
+  color: hsl(179, 100%, 13%);
+}
+
+/* Hover Effects */
+.sedans a:hover {
+  background: hsl(31, 77%, 52%);
+  border: 1px solid hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 95%)  !important;
+  transition: 0.5s;
+}
+
+.suvs a:hover {
+  background: hsl(184, 100%, 22%);
+  border: 1px solid hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 95%)  !important;
+  transition: 0.5s;
+}
+
+.luxury a:hover {
+  background: hsl(179, 100%, 13%);
+  border: 1px solid hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 95%)  !important;
+  transition: 0.5s;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 900px) {
+  html {
+    height: 100%;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    margin: 30rem auto;
+  }
+  .sedans,
+  .suvs,
+  .luxury {
+    flex: 1;
+    max-width: 350px;
+  }
+  .sedans {
+    border-radius: 10px 10px 0 0;
+    padding: 3.5em;
+  }
+  .luxury {
+    border-radius: 0 0 10px 10px;
+  }
+  article {
+    display: inline-block;
+    margin: 5px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width:1100px)  {
+  .luxury {
+    height: 473px;
+  }
+}
